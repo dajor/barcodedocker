@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=barcodereader;AccountKey=j0pktSu3xPZdwSa04gd31iFsQ+uotCwrszWiYmP9Cx2eFqck4d/DqQUuh28ZpHU4KHBhVz286SZcvcihovgQcQ==",
+    "barcodereader_STORAGE": "DefaultEndpointsProtocol=https;AccountName=barcodereader;AccountKey=j0pktSu3xPZdwSa04gd31iFsQ+uotCwrszWiYmP9Cx2eFqck4d/DqQUuh28ZpHU4KHBhVz286SZcvcihovgQcQ==",
+    "SugarURL": "https://ludwigbeck-dev.crm-couch.com/",
+    "SugarUser": "admin",
+    "SugarPassword": "fellow$29"
+  },
+  "ConnectionStrings": {}
+}

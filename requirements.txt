@@ -1,0 +1,5 @@
+pyzbar==0.1.8 
+azure-functions
+Pillow
+sugarcrm-python==0.1.7
+azure-storage-blob==1.5.0
