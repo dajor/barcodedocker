@@ -1,12 +1,22 @@
 
+###
+# Before Login into Docker and Azure
+# docker login  
+# az login 
+
+
 export SugarURL="https://ludwigbeck-dev.crm-couch.com/"
 export SugarUser="******"
 # If your password have special character use escape 
 export SugarPassword="*****"
 
-docker build --tag dajor85570/barcodedocker:v1.3 .   
+export DockerImage=dajor85570/barcodedocker:v1.8
 
-docker push dajor85570/barcodedocker:v1.3
+
+
+docker build --tag $DockerImage .   
+
+docker push $DockerImage
 
 az group create \
 --name lb-barcodereaderdocker --location  westeurope 
@@ -31,7 +41,7 @@ az functionapp create \
 --name barcodereaderdocker \
 --storage-account  barcodereaderdocker \
 --plan barcodereaderdocker \
---deployment-container-image-name dajor85570/barcodedocker:v1.2
+--deployment-container-image-name $DockerImage
 
 
 
@@ -73,6 +83,4 @@ az functionapp restart --name barcodereaderdocker --resource-group lb-barcoderea
 
 # And now the best - delete all the points we have done cleanly so we do not have all the storage etc to pay 
 
-
-
-#az group delete --name lb-barcodereaderdocker --yes
+az group delete --name lb-barcodereaderdocker --yes
