@@ -125,6 +125,7 @@ storageConnectionString1=$(az storage account show-connection-string \
 
 
 
+
 docker run -e AzureWebJobsStorage=$storageConnectionString1 -e SugarURL=$SugarURL \
   -e SugarUser=$SugarUser -e SugarPassword=$SugarPassword \
   -e barcodereader_STORAGE=$storageConnectionString $DockerImage
