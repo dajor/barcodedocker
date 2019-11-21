@@ -17,6 +17,8 @@ https://cloud.docker.com/repository/docker/dajor85570/barcodedocker
 # docker login  
 # az login 
 
+```{r, engine='bash', code_block_name}
+
 
 export SugarURL="https://ludwigbeck-dev.crm-couch.com/"
 export SugarUser="******"
@@ -98,13 +100,15 @@ az functionapp restart --name barcodereaderdocker --resource-group lb-barcoderea
 
 az group delete --name lb-barcodereaderdocker --yes
 
+```
 
 ## Update 
 
+```{r, engine='bash', code_block_name}
 
 export SugarURL="https://ludwigbeck-dev.crm-couch.com/"
 export SugarUser="******"
-# If your password have special character use escape 
+#### If your password have special character use escape 
 export SugarPassword="*****"
 
 export DockerImage=dajor85570/barcodedocker:v1.8
@@ -144,3 +148,9 @@ az functionapp config appsettings set --name barcodereaderdocker \
 az functionapp deployment container config --enable-cd \
 --query CI_CD_URL --output tsv \
 --name barcodereaderdocker --resource-group lb-barcodereaderdocker
+
+
+```
+
+![Webhook add](Webhook.png)
+

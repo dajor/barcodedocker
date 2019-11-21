@@ -6,9 +6,9 @@
 
 
 export SugarURL="https://ludwigbeck-dev.crm-couch.com/"
-export SugarUser="******"
+export SugarUser="admin"
 # If your password have special character use escape 
-export SugarPassword="*****"
+export SugarPassword="fellow\$29"
 
 export DockerImage=dajor85570/barcodedocker:v1.8
 
@@ -83,4 +83,4 @@ az functionapp restart --name barcodereaderdocker --resource-group lb-barcoderea
 
 # And now the best - delete all the points we have done cleanly so we do not have all the storage etc to pay 
 
-az group delete --name lb-barcodereaderdocker --yes
+#az group delete --name lb-barcodereaderdocker --yes
